@@ -1,0 +1,200 @@
+.container {
+    display: grid;    
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(4, 25vh);
+    grid-template-areas: 
+        "u u t t a a r r r r"
+        "m m t t a a b b b b"
+        "m m e e e e p p p p"
+        "m m e e e e p p p p";
+    background-color: #f0f5f2;
+}
+
+.userInfo {
+    grid-area: u;
+    width: 16.8vw;
+    height: 18vh;
+    justify-self: center;
+    align-self: end;
+    border: 1px solid #e2ece6;
+    background-color: #f7faf8;
+    position: relative;
+}
+
+#usrIcon {
+    width: 6.4vw;
+    height: 13vh;
+    margin-top: 3vh;
+    margin-left: 2vw;
+    display: inline-block;
+}
+
+#userName {
+    position: absolute;
+    top: 6vh;
+    right: 3.5vw;
+    font-size: 16px;
+    font-family: serif;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#adminTag {
+    position: absolute;
+    padding: 2px 8px 2px 8px;
+    top: 10vh;
+    right: 3.3vw;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #75a58b;
+    border-radius: 6px;
+}
+
+.menu {
+    grid-area: m;
+    width: 16.8vw;
+    height: 69vh;
+    justify-self: center;
+    align-self: start;
+    border: 1px solid #e2ece6;
+    background-color: #ffffff;
+}
+
+#dataView, #errorLog, #search {
+    width: auto;
+    height: 8vh;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+}
+
+#trignle, #trignleOne, #trignleTwo{
+    width: 0;
+    height: 0;
+    border: 8px solid;
+    position: absolute;
+    right: 1vw;
+    border-color: transparent transparent transparent #a5c6b4;
+}
+
+.type {
+    grid-area: t;
+    width: 20vw;
+    height: 42vh;
+    margin-bottom: 1vh;
+    justify-self: center;
+    align-self: end;
+    background-color: #ffffff;
+}
+
+.amount {
+    grid-area: a;
+    width: 20vw;
+    height: 42vh;
+    margin-bottom: 1vh;
+    justify-self: center;
+    align-self: end;
+    background-color: #ffffff;
+}
+
+.errorAlarm {
+    grid-area: e;
+    width: 40vw;
+    height: 42vh;
+    margin-top: 2vh;
+    background-color: #ffffff;
+}
+
+.errorAlarm p, .roomNum p, .bolletinBoard p, .topBuilding p{
+    width: auto;
+    height: 4vh;
+    padding: 0.8vh 0 0 1vw;
+    font-size: 12px;
+    color: #75a58b;
+    background-color: #f7faf8;
+}
+
+.errorAlarm ul {
+    width: 36vw;
+    height: 32vh;
+    margin-top: 4vh;
+    margin-left: 2vw;
+}
+
+.errorAlarm ul li {
+    width: auto;
+    height: 7vh;
+    margin-bottom: 1vh;
+    border-radius: 16px;
+    background-color: #f7faf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorAlarm ul li span {
+    font-size: 12px;
+    margin-left: 2vw;
+}
+
+.roomNum {
+    grid-area: r;
+    width: 36vw;
+    height: 17vh;
+    margin-bottom: 1vh;
+    justify-self: center;
+    align-self: end;
+    background-color: #ffffff;
+}
+
+#num {
+    width: auto;
+    height: 13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#num p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.bolletinBoard {
+    grid-area: b;
+    width: 36vw;
+    height: 23vh;
+    margin-top: 2vh;
+    justify-self: center;
+    align-self: end;
+    background-color: #ffffff;
+}
+
+#editArea {
+    width: auto;
+    height: 19vh;
+    padding: 0.8vh 0 0 1vw;
+    font-size: 12px;
+    color: #000000;
+}
+
+.topBuilding {
+    grid-area: p;
+    width: 36vw;
+    height: 42vh;
+    margin-top: 2vh;
+    justify-self: center;
+    background-color: #ffffff;
+}
+
+#histogram {
+    width: 32vw;
+    height: 36vh;
+    padding: 0 0 0 3vw;
+}

@@ -1,0 +1,238 @@
+.container {
+    display: grid;    
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(4, 25vh);
+    grid-template-areas: 
+        "u u e e e e h h h h"
+        "m m e e e e h h h h"
+        "m m p p p p h h h h"
+        "m m p p p p h h h h";
+    background-color: #f0f5f2;
+}
+
+.userInfo {
+    grid-area: u;
+    width: 16.8vw;
+    height: 18vh;
+    justify-self: center;
+    align-self: end;
+    border: 1px solid #e2ece6;
+    background-color: #f7faf8;
+    position: relative;
+}
+
+#usrIcon {
+    width: 6.4vw;
+    height: 13vh;
+    margin-top: 3vh;
+    margin-left: 2vw;
+    display: inline-block;
+}
+
+#userName {
+    position: absolute;
+    top: 6vh;
+    right: 3.5vw;
+    font-size: 16px;
+    font-family: serif;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#adminTag {
+    position: absolute;
+    padding: 2px 8px 2px 8px;
+    top: 10vh;
+    right: 3.3vw;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #75a58b;
+    border-radius: 6px;
+}
+
+.menu {
+    grid-area: m;
+    width: 16.8vw;
+    height: 69vh;
+    justify-self: center;
+    align-self: start;
+    border: 1px solid #e2ece6;
+    background-color: #ffffff;
+}
+
+#dataView, #errorLog, #search {
+    width: auto;
+    height: 8vh;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+}
+
+#search {
+    background-color: #f7faf8;
+    color: #75a58b;
+}
+
+#trignleOne, #trignleTwo{
+    width: 0;
+    height: 0;
+    border: 8px solid;
+    position: absolute;
+    right: 1vw;
+    border-color: transparent transparent transparent #a5c6b4;
+}
+
+.errorRecord {
+    grid-area: e;
+    width: 40vw;
+    height: 42vh;
+    margin-bottom: 1vh;
+    justify-self: center;
+    align-self: end;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.errorRecord p, .unprocessed p, .historyRecord p{
+    width: auto;
+    height: 4vh;
+    padding: 0.8vh 0 0 1vw;
+    font-size: 12px;
+    color: #75a58b;
+    background-color: #f7faf8;
+}
+
+.errorInfo {
+    width: 10vw;
+    height: 16vh;
+    position: absolute;
+    left: 2.6vw;
+    top: 16vh;
+    font-size: 13px;
+}
+
+.leakage, .collectionError {
+    margin-bottom: 6vh;
+    width: 8vw;
+    position: relative;
+}
+
+#leakageNum, #collectionErrorNum {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    margin-top: -1vh;
+}
+
+#hisDataView {
+    width: 27vw;
+    height: 38vh;
+    position: absolute;
+    right: 1vw;
+    bottom: 2vh;
+}
+
+.unprocessed {
+    grid-area: p;
+    width: 40vw;
+    height: 42vh;
+    margin-top: 2vh;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.exportExcel {
+    width: 10vw;
+    height: 4vh;
+    background-color: #ffffff;
+    position: absolute;
+    right: 0;
+}
+
+
+#exportLogo {
+    display: inline-block;
+    width: 1.4vw;
+    height: 2.4vh;
+    cursor: pointer;
+}
+
+.exportExcel p {
+    font-weight: bold;
+    display: inline-block;
+    background-color: #ffffff;
+    margin-left: -0.2vw;
+}
+
+.unprocessed ul {
+    width: 38vw;
+    height: 30vh;
+    position: absolute;
+    top: 4vh;
+    left: 1vw;
+    margin-top: 4vh;
+}
+
+.unprocessed ul li {
+    width: auto;
+    height: 5.6vh;
+    margin-bottom: 1vh;
+    border-radius: 16px;
+    background-color: #f7faf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.evevtDate, .roomEvent {
+    font-size: 12px;
+    margin-left: 2vw;
+}
+
+.eventProcess {
+    width: 4vw;
+    font-size: 12px;
+    margin-left: 10vw;
+    color: #ffffff;
+    padding: 0.2vh 0 0.2vh 0.9vw;
+    background-color: #75a58b;
+    border-radius: 8px;
+}
+
+.historyRecord {
+    grid-area: h;
+    width: 36vw;
+    height: 87vh;
+    justify-self: center;
+    align-self: center;
+    background-color: #ffffff;
+}
+
+.historyRecord ul {
+    width: 32vw;
+    height: 73vh;
+    margin-top: 4vh;
+    margin-left: 2vw;
+}
+
+.historyRecord ul li {
+    width: auto;
+    height: 7vh;
+    margin-bottom: 1vh;
+    border-radius: 16px;
+    background-color: #f7faf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historyRecord ul li span {
+    font-size: 12px;
+    margin-left: 2vw;
+}

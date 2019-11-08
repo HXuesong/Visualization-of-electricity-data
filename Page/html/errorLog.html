@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/errorLog.css">
+
+    <!-- 引入echarts依赖 -->
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+    <script defer type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+    <script defer src="../js/dataLine.js"></script>
+
+    <title>全校用电数据可视化</title>
+</head>
+<body>
+    <div class="container">
+        <div class="userInfo">
+            <img src="../imges/user.png" alt="" id="usrIcon">
+            <p id="userName">李彬楷</p>
+            <div id="adminTag">管理员</div>
+        </div>
+        <div class="menu">
+            <a href="../html/dataView.html" id="dataView">
+                <p>全校用电数据可视化</p>
+                <span id="trignleOne"></span>
+            </a>
+            <a href="../html/errorLog.html" id="errorLog">
+                <p>用电异常记录</p>
+            </a>
+            <a href="../html/eleSearch.html" id="search">
+                <p>用电查询</p>
+                <span id="trignleTwo"></span>
+            </a>
+        </div>
+        <div class="searchTab">
+            <div class="tabBox">
+                <div class="tabContainer">
+                    <span>楼栋号</span>
+                    <div class="input-box input-Selector" id="buildingNum">
+                        <input type="text" class="wx-input">
+                    </div>
+                </div>
+                <div class="tabContainer">
+                    <span>寝室号</span>
+                    <div class="input-box2 input-Selector" id="roomNum">
+                        <input type="text" class="wx-input">
+                    </div>
+                </div>
+                <div class="tabContainer">
+                    <span>年份</span>
+                    <div class="input-box3 input-Selector" id="yearNum">
+                        <input type="text" class="wx-input">
+                    </div>
+                </div>
+                <div class="tabContainer">
+                    <span>月份</span>
+                    <div class="input-box4 input-Selector" id="mounthNum">
+                        <input type="text" class="wx-input">
+                    </div>
+                </div>
+            </div>
+            <div id="certainBox">确定</div>
+        </div>
+
+        <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+        <script src="../js/errorLog.js"></script>
+
+        <div class="hisDataView">
+            <p>寝室用电历史数据</p>
+            <div id="hisDataView"></div>
+        </div>
+    </div>
+</body>
+</html>

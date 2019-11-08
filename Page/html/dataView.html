@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/dataView.css">
+
+    <!-- 地图拖动 -->
+    <script defer src="../js/dragMap.js"></script>
+
+    <script defer src="../js/mapView.js"></script>
+
+    <!-- echarts相关依赖 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js" defer></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js" defer></script>
+    <script src="../js/typePie.js" defer></script>
+    <script src="../js/amountPie.js" defer></script>
+
+    <title>全校用电数据可视化</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="userInfo">
+            <img src="../imges/user.png" alt="" id="usrIcon">
+            <p id="userName">李彬楷</p>
+            <div id="adminTag">管理员</div>
+        </div>
+        <div class="menu">
+            <a href="../html/dataView.html" id="dataView">
+                <p>全校用电数据可视化</p>
+            </a>
+            <a href="../html/errorLog.html" id="errorLog">
+                <p>用电异常记录</p>
+                <span id="trignleOne"></span>
+            </a>
+            <a href="../html/eleSearch.html" id="search">
+                <p>用电查询</p>
+                <span id="trignleTwo"></span>
+            </a>
+        </div>
+
+        <div class="type" id="type"></div>
+        <div class="amount" id="amount"></div>
+
+        <div id="map">
+            <img src="../imges/map.png" alt="" usemap="#map" class="dragAble"/>
+            <map name="map">
+                <area shape="rect" coords="929, 498, 974, 570" onclick="mapView('37')" href="#"/>
+                <area shape="rect" coords="869, 500, 912, 569" onclick="mapView('34')" href="#"/>
+                <area shape="rect" coords="807, 524, 849, 592" onclick="mapView('8')" href="#"/>
+                <area shape="rect" coords="756, 523, 799, 593" onclick="mapView('9')" href="#"/>
+                <area shape="rect" coords="704, 525, 748, 590" onclick="mapView('10')" href="#"/>
+                <area shape="rect" coords="562, 524, 603, 593" onclick="mapView('11')" href="#"/>
+                <area shape="rect" coords="915, 453, 958, 486" onclick="mapView('36')" href="#"/>
+                <area shape="rect" coords="854, 453, 894, 488" onclick="mapView('33')" href="#"/>
+                <area shape="rect" coords="596, 476, 635, 512" onclick="mapView('12')" href="#"/>
+                <area shape="rect" coords="265, 438, 307, 505" onclick="mapView('5')" href="#"/>
+                <area shape="rect" coords="776, 383, 818, 449" onclick="mapView('35')" href="#"/>
+                <area shape="rect" coords="709, 383, 752, 451" onclick="mapView('32')" href="#"/>
+                <area shape="rect" coords="640, 383, 685, 452" onclick="mapView('31')" href="#"/>
+                <area shape="rect" coords="505, 398, 548, 467" onclick="mapView('1')" href="#"/>
+                <area shape="rect" coords="429, 397, 475, 466" onclick="mapView('2')" href="#"/>
+                <area shape="rect" coords="360, 398, 405, 464" onclick="mapView('3')" href="#"/>
+                <area shape="rect" coords="261, 353, 304, 422" onclick="mapView('4')" href="#"/>
+                <area shape="rect" coords="757, 300, 802, 366" onclick="mapView('30')" href="#"/>
+                <area shape="rect" coords="710, 299, 753, 368" onclick="mapView('29')" href="#"/>
+                <area shape="rect" coords="659, 299, 703, 366" onclick="mapView('28')" href="#"/>
+                <area shape="rect" coords="611, 301, 653, 368" onclick="mapView('27')" href="#"/>
+                <area shape="rect" coords="563, 300, 606, 368" onclick="mapView('26')" href="#"/>
+                <area shape="rect" coords="516, 301, 558, 369" onclick="mapView('25')" href="#"/>
+                <area shape="rect" coords="466, 300, 511, 369" onclick="mapView('24')" href="#"/>
+                <area shape="rect" coords="338, 311, 380, 378" onclick="mapView('6')" href="#"/>
+                <area shape="rect" coords="376, 236, 415, 300" onclick="mapView('16')" href="#"/>
+                <area shape="rect" coords="307, 237, 351, 301" onclick="mapView('15')" href="#"/>
+                <area shape="rect" coords="297, 119, 340, 189" onclick="mapView('17')" href="#"/>
+                <area shape="rect" coords="238, 121, 281, 190" onclick="mapView('18')" href="#"/>
+                <area shape="rect" coords="164, 121, 205, 189" onclick="mapView('19')" href="#"/>
+                <area shape="rect" coords="99, 121, 142, 191" onclick="mapView('20')" href="#"/>
+                <area shape="rect" coords="380, 25, 422, 95" onclick="mapView('21')" href="#"/>
+                <area shape="rect" coords="260, 26, 304, 95" onclick="mapView('22')" href="#"/>
+                <area shape="rect" coords="132, 26, 174, 96" onclick="mapView('23B')" href="#"/>
+                <area shape="rect" coords="85, 27, 126, 97" onclick="mapView('23A')" href="#"/>
+            </map>
+            <div id="infoArea">
+                <p>
+                    <span>楼栋：</span>
+                    <span id="mapBulNum">23A栋</span>
+                </p>
+                <p>
+                    <span>寝室数目：</span>
+                    <span id="mapRoomNum">565</span>
+                </p>
+                <p>
+                    <span>用电异常寝室：</span>
+                    <span id="mapErrorNum">226</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

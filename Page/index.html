@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- echarts相关依赖 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js" defer></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js" defer></script>
+
+    <script src="./js/typePie.js" defer></script>
+    <script src="./js/amountPie.js" defer></script>
+    <script src="./js/histogram.js" defer></script>
+
+    <title>全校用电数据可视化</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="userInfo">
+            <img src="./imges/user.png" alt="" id="usrIcon">
+            <p id="userName">李彬楷</p>
+            <div id="adminTag">管理员</div>
+        </div>
+        <div class="menu">
+            <a href="./html/dataView.html" id="dataView" target="_blank">
+                <p>全校用电数据可视化</p>
+                <span id="trignle"></span>
+            </a>
+            <a href="./html/errorLog.html" id="errorLog" target="_blank">
+                <p>用电异常记录</p>
+                <span id="trignleOne"></span>
+            </a>
+            <a href="./html/eleSearch.html" id="search" target="_blank">
+                <p>用电查询</p>
+                <span id="trignleTwo"></span>
+            </a>
+        </div>
+
+        <div class="type" id="type"></div>
+        <div class="amount" id="amount"></div>
+
+        <div class="errorAlarm">
+            <p>用电异常报警</p>
+            <ul>
+                <li>
+                    <span>2019-01-01</span>
+                    <span>用电量突增</span>
+                </li>
+                <li>
+                    <span>2019-01-01</span>
+                    <span>用电量突增</span>
+                </li>
+                <li>
+                    <span>2019-01-01</span>
+                    <span>用电量突增</span>
+                </li>
+                <li>
+                    <span>2019-01-01</span>
+                    <span>用电量突增</span>
+                </li>
+            </ul>
+        </div>
+        <div class="roomNum">
+            <p>管理寝室数目</p>
+            <div id="num"><p>5000间</p></div>
+        </div>
+        <div class="bolletinBoard">
+            <p>公告板</p>
+            <div id="editArea">点击编辑......</div>
+        </div>
+        <div class="topBuilding">
+            <p>用电楼栋TOP10</p>
+            <div id="histogram"></div>
+        </div>
+
+    </div>
+</body>
+</html>
